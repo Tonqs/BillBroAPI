@@ -42,41 +42,12 @@ public class TaskPartyRestController {
     }
 
     @PutMapping("/{id}")
-    public TaskParty updateName(@PathVariable int id, @RequestBody TaskParty taskParty){
+    public TaskParty update(@PathVariable int id, @RequestBody TaskParty taskParty){
         TaskParty record = repository.findById(id).get();
         record.setT_name(taskParty.getT_name());
-        repository.save(record);
-        return record;
-    }
-
-    @PutMapping("/{id}")
-    public TaskParty updateRes(@PathVariable int id, @RequestBody TaskParty taskParty){
-        TaskParty record = repository.findById(id).get();
         record.setT_res(taskParty.getT_res());
-        repository.save(record);
-        return record;
-    }
-
-
-    @PutMapping("/{id}")
-    public TaskParty updateState(@PathVariable int id, @RequestBody TaskParty taskParty){
-        TaskParty record = repository.findById(id).get();
         record.setT_state(taskParty.getT_state());
-        repository.save(record);
-        return record;
-    }
-
-    @PutMapping("/{id}")
-    public TaskParty updateDate(@PathVariable int id, @RequestBody TaskParty taskParty){
-        TaskParty record = repository.findById(id).get();
         record.setT_date(taskParty.getT_date());
-        repository.save(record);
-        return record;
-    }
-
-    @PutMapping("/{id}")
-    public TaskParty updateEmail(@PathVariable int id, @RequestBody TaskParty taskParty){
-        TaskParty record = repository.findById(id).get();
         record.setT_email(taskParty.getT_email());
         repository.save(record);
         return record;

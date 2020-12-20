@@ -1,5 +1,6 @@
 package th.ac.ku.billbroapi.controller;
 
+
 import org.springframework.web.bind.annotation.*;
 import th.ac.ku.billbroapi.data.CrewmateRepository;
 import th.ac.ku.billbroapi.model.Crewmate;
@@ -43,30 +44,14 @@ public class CrewmateRestController {
     }
 
     @PutMapping("/{id}")
-    public Crewmate updateName(@PathVariable int id, @RequestBody Crewmate crewmate){
+    public Crewmate update(@PathVariable int id, @RequestBody Crewmate crewmate){
         Crewmate record = repository.findById(id).get();
         record.setCm_name(crewmate.getCm_name());
-        repository.save(record);
-        return record;
-    }
-
-    @PutMapping("/{id}")
-    public Crewmate updateEmail(@PathVariable int id, @RequestBody Crewmate crewmate){
-        Crewmate record = repository.findById(id).get();
         record.setCm_email(crewmate.getCm_email());
-        repository.save(record);
-        return record;
-    }
-
-
-    @PutMapping("/{id}")
-    public Crewmate updateState(@PathVariable int id, @RequestBody Crewmate crewmate){
-        Crewmate record = repository.findById(id).get();
         record.setCm_state(crewmate.getCm_state());
         repository.save(record);
         return record;
     }
-
 
     @DeleteMapping("/{id}")
     public Crewmate delete(@PathVariable int id){

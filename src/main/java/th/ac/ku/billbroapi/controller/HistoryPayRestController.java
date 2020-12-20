@@ -42,16 +42,9 @@ public class HistoryPayRestController {
     }
 
     @PutMapping("/{id}")
-    public HistoryPay updateDept(@PathVariable int id, @RequestBody HistoryPay historyPay){
+    public HistoryPay update(@PathVariable int id, @RequestBody HistoryPay historyPay){
         HistoryPay record = repository.findById(id).get();
         record.setHp_dept(historyPay.getHp_dept());
-        repository.save(record);
-        return record;
-    }
-
-    @PutMapping("/{id}")
-    public HistoryPay updateEmail(@PathVariable int id, @RequestBody HistoryPay historyPay){
-        HistoryPay record = repository.findById(id).get();
         record.setHp_payed(historyPay.getHp_payed());
         repository.save(record);
         return record;
