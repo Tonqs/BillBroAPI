@@ -21,13 +21,14 @@ public class CrewmateRestController {
         return repository.findAll();
     }
 
-    @GetMapping("/crewmate/{crewmateId}")
+    @GetMapping("/task-party/{taskPartyId}")
     public List<Crewmate> getAllCrewmateID(@PathVariable int id){
         return repository.findByCrewmateID(id);
     }
 
     @GetMapping("/{id}")
     public Crewmate getOne(@PathVariable int id){
+        //id of task-party
         try{
             return repository.findById(id).get();
         }catch (NoSuchElementException e){

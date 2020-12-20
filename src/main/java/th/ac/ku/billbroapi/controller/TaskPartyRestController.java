@@ -21,7 +21,7 @@ public class TaskPartyRestController {
         return repository.findAll();
     }
 
-    @GetMapping("/task-party/{taskId}")
+    @GetMapping("/captain/{captainId}")
     public List<TaskParty> getAllTaskID(@PathVariable int id){
         return repository.findByTaskPartyID(id);
     }

@@ -21,7 +21,7 @@ public class HistoryPayRestController {
         return repository.findAll();
     }
 
-    @GetMapping("/history-pay/{hist-payId}")
+    @GetMapping("/crewmate/{crewmateId}")
     public List<HistoryPay> getAllHistoryPayID(@PathVariable int id){
         return repository.findByHistoryPayID(id);
     }
