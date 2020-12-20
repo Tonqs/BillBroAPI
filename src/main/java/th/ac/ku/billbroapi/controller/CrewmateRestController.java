@@ -23,7 +23,7 @@ public class CrewmateRestController {
 
     @GetMapping("/task-party/{taskPartyId}")
     public List<Crewmate> getAllCrewmateID(@PathVariable int id){
-        return repository.findByCrewmateID(id);
+        return repository.findByCmId(id);
     }
 
     @GetMapping("/{id}")

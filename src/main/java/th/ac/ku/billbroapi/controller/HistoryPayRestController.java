@@ -23,7 +23,7 @@ public class HistoryPayRestController {
 
     @GetMapping("/crewmate/{crewmateId}")
     public List<HistoryPay> getAllHistoryPayID(@PathVariable int id){
-        return repository.findByHistoryPayID(id);
+        return repository.findByHpId(id);
     }
 
     @GetMapping("/{id}")

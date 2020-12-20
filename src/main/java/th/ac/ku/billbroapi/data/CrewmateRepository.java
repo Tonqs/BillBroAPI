@@ -1,11 +1,13 @@
 package th.ac.ku.billbroapi.data;
 
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 import th.ac.ku.billbroapi.model.Crewmate;
-import th.ac.ku.billbroapi.model.TaskParty;
 
 import java.util.List;
 
-public interface CrewmateRepository extends JpaRepository<Crewmate ,Integer > {
-    List<Crewmate> findByCrewmateID(int id);
+@Repository
+public interface CrewmateRepository extends
+        JpaRepository<Crewmate ,Integer > {
+    List<Crewmate> findByCmId(int cm_id);
 }

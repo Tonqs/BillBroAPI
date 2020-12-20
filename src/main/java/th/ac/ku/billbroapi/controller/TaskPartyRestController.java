@@ -23,7 +23,7 @@ public class TaskPartyRestController {
 
     @GetMapping("/captain/{captainId}")
     public List<TaskParty> getAllTaskID(@PathVariable int id){
-        return repository.findByTaskPartyID(id);
+        return repository.findBytid(id);
     }
 
     @GetMapping("/{id}")

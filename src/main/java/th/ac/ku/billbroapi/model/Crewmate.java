@@ -1,12 +1,15 @@
 package th.ac.ku.billbroapi.model;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
 public class Crewmate {
     @Id
-    private int cm_id;
+    @GeneratedValue(strategy  = GenerationType.IDENTITY)
+    private int cmId;
 
     private String cm_name;
     private String cm_email;
@@ -17,7 +20,7 @@ public class Crewmate {
     }
 
     public Crewmate(int cm_id, String cm_name, String cm_email, Double cm_per_price, String cm_state) {
-        this.cm_id = cm_id;
+        this.cmId = cm_id;
         this.cm_name = cm_name;
         this.cm_email = cm_email;
         this.cm_per_price = cm_per_price;
@@ -40,8 +43,8 @@ public class Crewmate {
         this.cm_state = cm_state;
     }
 
-    public int getCm_id() {
-        return cm_id;
+    public int getCmId() {
+        return cmId;
     }
 
     public String getCm_name() {
@@ -63,7 +66,7 @@ public class Crewmate {
     @Override
     public String toString() {
         return "Crewmate{" +
-                "cm_id=" + cm_id +
+                "cmId=" + cmId +
                 ", cm_name='" + cm_name + '\'' +
                 ", cm_email='" + cm_email + '\'' +
                 ", cm_per_price=" + cm_per_price +

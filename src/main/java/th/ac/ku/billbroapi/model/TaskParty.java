@@ -1,12 +1,15 @@
 package th.ac.ku.billbroapi.model;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
 public class TaskParty {
     @Id
-    private int t_id;
+    @GeneratedValue(strategy  = GenerationType.IDENTITY)
+    private int tid;
 
     private String t_name;
     private String t_res;
@@ -20,7 +23,7 @@ public class TaskParty {
     }
 
     public TaskParty(int t_id, String t_name, String t_res, String t_date, Double t_price, String t_pic, String t_state,String email) {
-        this.t_id = t_id;
+        this.tid = t_id;
         this.t_name = t_name;
         this.t_res = t_res;
         this.t_date = t_date;
@@ -54,8 +57,8 @@ public class TaskParty {
         this.t_state = t_state;
     }
 
-    public int getT_id() {
-        return t_id;
+    public int getTid() {
+        return tid;
     }
 
     public String getT_name() {
@@ -93,7 +96,7 @@ public class TaskParty {
     @Override
     public String toString() {
         return "TaskParty{" +
-                "t_id=" + t_id +
+                "tid=" + tid +
                 ", t_name='" + t_name + '\'' +
                 ", t_res='" + t_res + '\'' +
                 ", t_date='" + t_date + '\'' +

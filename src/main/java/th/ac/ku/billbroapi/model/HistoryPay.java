@@ -1,12 +1,15 @@
 package th.ac.ku.billbroapi.model;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
 public class HistoryPay {
     @Id
-    private int hp_id;
+    @GeneratedValue(strategy  = GenerationType.IDENTITY)
+    private int hpId;
 
     private double hp_dept;
     private double hp_payed;
@@ -15,7 +18,7 @@ public class HistoryPay {
     }
 
     public HistoryPay(int hp_id, double hp_dept, double hp_payed) {
-        this.hp_id = hp_id;
+        this.hpId = hp_id;
         this.hp_dept = hp_dept;
         this.hp_payed = hp_payed;
     }
@@ -28,8 +31,8 @@ public class HistoryPay {
         this.hp_payed = hp_payed;
     }
 
-    public int getHp_id() {
-        return hp_id;
+    public int getHpId() {
+        return hpId;
     }
 
     public double getHp_dept() {
@@ -43,7 +46,7 @@ public class HistoryPay {
     @Override
     public String toString() {
         return "HistoryPay{" +
-                "hp_id=" + hp_id +
+                "hpId=" + hpId +
                 ", hp_dept=" + hp_dept +
                 ", hp_payed=" + hp_payed +
                 '}';
