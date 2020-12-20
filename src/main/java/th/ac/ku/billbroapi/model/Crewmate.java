@@ -15,6 +15,7 @@ public class Crewmate {
     private String cm_email;
     private Double cm_per_price;
     private String cm_state;
+    private int tId;
 
     public Crewmate() {
     }

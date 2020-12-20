@@ -13,6 +13,7 @@ public class HistoryPay {
 
     private double hp_dept;
     private double hp_payed;
+    private int cmId;
 
     public HistoryPay() {
     }

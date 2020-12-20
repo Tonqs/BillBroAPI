@@ -21,10 +21,11 @@ public class TaskPartyRestController {
         return repository.findAll();
     }
 
-    @GetMapping("/captain/{captainId}")
-    public List<TaskParty> getAllTaskID(@PathVariable int id){
-        return repository.findBytid(id);
+    @GetMapping("/captain/{cId}")
+    public List<TaskParty> getAllCaptainID(@PathVariable int cId){
+        return repository.findBycId(cId);
     }
+
 
     @GetMapping("/{id}")
     public TaskParty getOne(@PathVariable int id){
@@ -48,7 +49,6 @@ public class TaskPartyRestController {
         record.setT_res(taskParty.getT_res());
         record.setT_state(taskParty.getT_state());
         record.setT_date(taskParty.getT_date());
-        record.setT_email(taskParty.getT_email());
         repository.save(record);
         return record;
     }

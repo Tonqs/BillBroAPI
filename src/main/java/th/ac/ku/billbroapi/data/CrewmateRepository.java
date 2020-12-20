@@ -9,5 +9,5 @@ import java.util.List;
 @Repository
 public interface CrewmateRepository extends
         JpaRepository<Crewmate ,Integer > {
-    List<Crewmate> findByCmId(int cm_id);
+    List<Crewmate> findBytId(int t_id);
 }

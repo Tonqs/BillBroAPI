@@ -9,5 +9,5 @@ import java.util.List;
 @Repository
 public interface HistoryPayRepository extends
         JpaRepository<HistoryPay , Integer> {
-    List<HistoryPay> findByHpId(int hp_id);
+    List<HistoryPay> findByCmId(int cm_id);
 }

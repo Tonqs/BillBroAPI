@@ -9,7 +9,7 @@ import javax.persistence.Id;
 public class TaskParty {
     @Id
     @GeneratedValue(strategy  = GenerationType.IDENTITY)
-    private int tid;
+    private int tId;
 
     private String t_name;
     private String t_res;
@@ -17,20 +17,19 @@ public class TaskParty {
     private Double t_price;
     private String t_pic;
     private String t_state;
-    private String t_email;
+    private int cId;
 
     public TaskParty() {
     }
 
     public TaskParty(int t_id, String t_name, String t_res, String t_date, Double t_price, String t_pic, String t_state,String email) {
-        this.tid = t_id;
+        this.tId = t_id;
         this.t_name = t_name;
         this.t_res = t_res;
         this.t_date = t_date;
         this.t_price = t_price;
         this.t_pic = t_pic;
         this.t_state = t_state;
-        this.t_email = email;
     }
 
     public void setT_name(String t_name) {
@@ -57,8 +56,8 @@ public class TaskParty {
         this.t_state = t_state;
     }
 
-    public int getTid() {
-        return tid;
+    public int gettId() {
+        return tId;
     }
 
     public String getT_name() {
@@ -85,18 +84,10 @@ public class TaskParty {
         return t_state;
     }
 
-    public String getT_email() {
-        return t_email;
-    }
-
-    public void setT_email(String t_email) {
-        this.t_email = t_email;
-    }
-
     @Override
     public String toString() {
         return "TaskParty{" +
-                "tid=" + tid +
+                "tId=" + tId +
                 ", t_name='" + t_name + '\'' +
                 ", t_res='" + t_res + '\'' +
                 ", t_date='" + t_date + '\'' +

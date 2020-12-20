@@ -8,5 +8,5 @@ import java.util.List;
 
 @Repository
 public interface TaskPartyRepository extends JpaRepository<TaskParty, Integer> {
-    List<TaskParty> findBytid(int t_id);
+    List<TaskParty> findBycId(int c_id);
 }
