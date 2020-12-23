@@ -15,21 +15,28 @@ public class TaskParty {
     private String t_res;
     private String t_date;
     private Double t_price;
-    private String t_pic;
     private String t_state;
     private int cId;
 
     public TaskParty() {
     }
 
-    public TaskParty(int t_id, String t_name, String t_res, String t_date, Double t_price, String t_pic, String t_state,String email) {
-        this.tId = t_id;
+    public int getcId() {
+        return cId;
+    }
+
+    public void setcId(int cId) {
+        this.cId = cId;
+    }
+
+    public TaskParty(int tId, String t_name, String t_res, String t_date, Double t_price, String t_state, int cId) {
+        this.tId = tId;
         this.t_name = t_name;
         this.t_res = t_res;
         this.t_date = t_date;
         this.t_price = t_price;
-        this.t_pic = t_pic;
         this.t_state = t_state;
+        this.cId = cId;
     }
 
     public void setT_name(String t_name) {
@@ -47,11 +54,6 @@ public class TaskParty {
     public void setT_price(Double t_price) {
         this.t_price = t_price;
     }
-
-    public void setT_pic(String t_pic) {
-        this.t_pic = t_pic;
-    }
-
     public void setT_state(String t_state) {
         this.t_state = t_state;
     }
@@ -76,10 +78,6 @@ public class TaskParty {
         return t_price;
     }
 
-    public String getT_pic() {
-        return t_pic;
-    }
-
     public String getT_state() {
         return t_state;
     }
@@ -91,9 +89,9 @@ public class TaskParty {
                 ", t_name='" + t_name + '\'' +
                 ", t_res='" + t_res + '\'' +
                 ", t_date='" + t_date + '\'' +
-                ", t_price='" + t_price + '\'' +
-                ", t_pic='" + t_pic + '\'' +
+                ", t_price=" + t_price +
                 ", t_state='" + t_state + '\'' +
+                ", cId=" + cId +
                 '}';
     }
 }

@@ -38,6 +38,8 @@ public class TaskPartyRestController {
 
     @PostMapping
     public TaskParty create(@RequestBody TaskParty taskParty){
+        System.out.println(taskParty);
+        System.out.println(taskParty.getcId());
         repository.save(taskParty);
         return taskParty;
     }
