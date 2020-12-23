@@ -64,6 +64,14 @@ public class Crewmate {
         return cm_state;
     }
 
+    public int gettId() {
+        return tId;
+    }
+
+    public void settId(int tId) {
+        this.tId = tId;
+    }
+
     @Override
     public String toString() {
         return "Crewmate{" +
@@ -72,6 +80,7 @@ public class Crewmate {
                 ", cm_email='" + cm_email + '\'' +
                 ", cm_per_price=" + cm_per_price +
                 ", cm_state='" + cm_state + '\'' +
+                ", tId=" + tId +
                 '}';
     }
 }

@@ -37,6 +37,7 @@ public class HistoryPayRestController {
 
     @PostMapping
     public HistoryPay create(@RequestBody HistoryPay historyPay){
+        System.out.println(historyPay);
         repository.save(historyPay);
         return historyPay;
     }

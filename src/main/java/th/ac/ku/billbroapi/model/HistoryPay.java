@@ -18,10 +18,11 @@ public class HistoryPay {
     public HistoryPay() {
     }
 
-    public HistoryPay(int hp_id, double hp_dept, double hp_payed) {
-        this.hpId = hp_id;
+    public HistoryPay(int hpId, double hp_dept, double hp_payed, int cmId) {
+        this.hpId = hpId;
         this.hp_dept = hp_dept;
         this.hp_payed = hp_payed;
+        this.cmId = cmId;
     }
 
     public void setHp_dept(double hp_dept) {
@@ -30,6 +31,28 @@ public class HistoryPay {
 
     public void setHp_payed(double hp_payed) {
         this.hp_payed = hp_payed;
+    }
+
+    public void setHpId(int hpId) {
+        this.hpId = hpId;
+    }
+
+    public int getCmId() {
+        return cmId;
+    }
+
+    public void setCmId(int cmId) {
+        this.cmId = cmId;
+    }
+
+    @Override
+    public String toString() {
+        return "HistoryPay{" +
+                "hpId=" + hpId +
+                ", hp_dept=" + hp_dept +
+                ", hp_payed=" + hp_payed +
+                ", cmId=" + cmId +
+                '}';
     }
 
     public int getHpId() {
@@ -44,12 +67,4 @@ public class HistoryPay {
         return hp_payed;
     }
 
-    @Override
-    public String toString() {
-        return "HistoryPay{" +
-                "hpId=" + hpId +
-                ", hp_dept=" + hp_dept +
-                ", hp_payed=" + hp_payed +
-                '}';
-    }
 }
